@@ -1,0 +1,11 @@
+DROP INDEX IF EXISTS idx_contas_usuario_id;
+DROP INDEX IF EXISTS idx_contas_agencia_id;
+DROP INDEX IF EXISTS idx_transacoes_conta_origem_id;
+DROP INDEX IF EXISTS idx_transacoes_conta_destino_id;
+DROP INDEX IF EXISTS idx_transacoes_tipo_transacao_id;
+DROP INDEX IF EXISTS idx_cartoes_conta_id;
+DROP INDEX IF EXISTS idx_emprestimos_usuario_id;
+DROP INDEX IF EXISTS idx_pagamentos_conta_id;
+DROP INDEX IF EXISTS idx_pagamentos_cartao_id;
+DROP INDEX IF EXISTS idx_depositos_conta_id;
+DROP INDEX IF EXISTS idx_historico_saldos_conta_id;

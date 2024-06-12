@@ -1,0 +1,11 @@
+CREATE INDEX idx_contas_usuario_id ON contas(usuario_id);
+CREATE INDEX idx_contas_agencia_id ON contas(agencia_id);
+CREATE INDEX idx_transacoes_conta_origem_id ON transacoes(conta_origem_id);
+CREATE INDEX idx_transacoes_conta_destino_id ON transacoes(conta_destino_id);
+CREATE INDEX idx_transacoes_tipo_transacao_id ON transacoes(tipo_transacao_id);
+CREATE INDEX idx_cartoes_conta_id ON cartoes(conta_id);
+CREATE INDEX idx_emprestimos_usuario_id ON emprestimos(usuario_id);
+CREATE INDEX idx_pagamentos_conta_id ON pagamentos(conta_id);
+CREATE INDEX idx_pagamentos_cartao_id ON pagamentos(cartao_id);
+CREATE INDEX idx_depositos_conta_id ON depositos(conta_id);
+CREATE INDEX idx_historico_saldos_conta_id ON historico_saldos(conta_id);
