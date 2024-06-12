@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS historico_saldos;
+DROP TABLE IF EXISTS depositos;
+DROP TABLE IF EXISTS pagamentos;
+DROP TABLE IF EXISTS emprestimos;
+DROP TABLE IF EXISTS cartoes;
+DROP TABLE IF EXISTS transacoes;
+DROP TABLE IF EXISTS tipos_transacoes;
+DROP TABLE IF EXISTS contas;
+DROP TABLE IF EXISTS agencias;
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS enderecos;
