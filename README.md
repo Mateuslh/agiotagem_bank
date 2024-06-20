@@ -43,10 +43,7 @@
   + Functions "colocar os comandos Functions"
 
 # Código Fonte do CRUD
-  - Linguagem de Programação C# .NET.
-  * Framework .NET 4.6
-  + Projeto Windows Forms
-  - Biblioteca Entity Framework para SQL Server (nativo)
+  tem que ver o que tem no CRUD
 
 # Relatório Final
   O relatório final está disponível no arquivo "arquivo com o relatorio final"
