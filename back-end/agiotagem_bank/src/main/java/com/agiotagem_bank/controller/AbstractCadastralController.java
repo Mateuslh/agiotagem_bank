@@ -74,4 +74,18 @@ public abstract class AbstractCadastralController<E, S extends AbstractCadastral
             return ResponseEntity.badRequest().body("Erro ao executar operação:" + e.getMessage());
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id) {
+        try {
+            E existingEntity = service.getById(id);
+            if (existingEntity != null) {
+                service.delete(id);
+                return ResponseEntity.ok().build();
+            }
+            return ResponseEntity.status(404).body("Entity not found");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro ao executar operação:" + e.getMessage());
+        }
+    }
 }
