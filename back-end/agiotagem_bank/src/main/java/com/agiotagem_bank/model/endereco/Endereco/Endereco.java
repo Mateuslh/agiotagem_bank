@@ -3,7 +3,10 @@ package com.agiotagem_bank.model.endereco.Endereco;
 import com.agiotagem_bank.model.EntityId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @Table(name = "enderecos")
