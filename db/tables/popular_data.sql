@@ -8,9 +8,9 @@ INSERT INTO conta (usuario_id, agencia_id, tipo_conta, saldo, data_abertura) VAL
 (7, 2, 'Conta Corrente', 4000.00, '2023-12-10 15:20:00'),
 (8, 3, 'Conta Poupança', 6000.00, '2024-01-15 16:00:00'),
 (9, 4, 'Conta Corrente', 8000.00, '2024-02-20 17:30:00'),
-(10, 5, 'Conta Corrente', 12000.00, '2024-03-25 18:45:00'),
+(10, 5, 'Conta Corrente', -50.00, '2024-03-25 18:45:00'),
 (11, 1, 'Conta Poupança', 2500.00, '2024-04-30 19:00:00'),
-(12, 2, 'Conta Corrente', 18000.00, '2024-05-05 20:15:00'),
+(12, 2, 'Conta Corrente', -300.00, '2024-05-05 20:15:00'),
 (13, 3, 'Conta Corrente', 3500.00, '2024-06-10 21:30:00'),
 (14, 4, 'Conta Poupança', 9000.00, '2024-07-15 22:45:00'),
 (15, 5, 'Conta Corrente', 3000.00, '2024-08-20 23:00:00'),
@@ -27,7 +27,7 @@ INSERT INTO conta (usuario_id, agencia_id, tipo_conta, saldo, data_abertura) VAL
 (26, 1, 'Conta Poupança', 18500.00, '2025-07-15 18:45:00'),
 (27, 2, 'Conta Corrente', 3600.00, '2025-08-20 19:00:00'),
 (28, 3, 'Conta Corrente', 9500.00, '2025-09-25 20:15:00'),
-(29, 4, 'Conta Poupança', 3100.00, '2025-10-30 21:30:00'),
+(29, 4, 'Conta Poupança', -100.00, '2025-10-30 21:30:00'),
 (30, 5, 'Conta Corrente', 6000.00, '2025-11-05 22:45:00');
 
 
