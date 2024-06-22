@@ -13,13 +13,13 @@ Marcos Vinicius Goudinho da Silva - marcosgoudinho
 
 # Modelo Físico
 
-Utilizamos a ferramenta de modelagem de dados https://dbeaver.io para criação do modelo físico do banco de dados,
+Utilizamos a ferramenta de modelagem de dados dbeaver.io para criação do modelo físico do banco de dados,
 para posterior exportação dos scripts DDL das tabelas e relacionamentos.
 
-![image](https://github.com/Mateuslh/agiotagem_bank/assets/88680833/933a74ca-67a7-47f2-bdf3-928fe766723c)
+![image](docs/modelo_fisico.png)
 
 # Dicionário de Dados
-As informações sobre as tabelas e índices foram documentados na planilha "link do dicionario"
+As informações sobre as tabelas e índices foram documentados na planilha [dicionario](docs/DicionarioDeDados%20(1).xlsx).
 
 # Scripts SQL
 Para este projeto foi utilizado o banco de dados [PostgreSQL](https://www.postgresql.org/)
