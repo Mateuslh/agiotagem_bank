@@ -2,10 +2,7 @@ package com.agiotagem_bank.model.Usuario;
 
 import com.agiotagem_bank.model.EntityId;
 import com.agiotagem_bank.model.endereco.Endereco.Endereco;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,5 +27,6 @@ public class Usuario extends EntityId {
     @JoinColumn
     private Endereco endereco;
 
+    @Temporal(TemporalType.DATE)
     private Date dataNascimento;
 }

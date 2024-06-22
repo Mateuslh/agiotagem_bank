@@ -34,6 +34,7 @@ public class Conta extends EntityId {
     @Column(precision = 15, scale = 2)
     private BigDecimal saldo;
 
+    @Temporal(TemporalType.DATE)
     private Date dataAbertura;
 
 }

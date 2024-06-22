@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "depositos")
@@ -26,7 +27,8 @@ public class Deposito extends EntityId {
     @Column(precision = 15, scale = 2)
     private BigDecimal valor;
 
-    private LocalDateTime dataDeposito;
+    @Temporal(TemporalType.DATE)
+    private Date dataDeposito;
 
     private String descricao;
 }

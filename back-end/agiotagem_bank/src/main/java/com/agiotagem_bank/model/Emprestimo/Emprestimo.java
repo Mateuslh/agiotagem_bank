@@ -11,6 +11,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -33,6 +34,8 @@ public class Emprestimo extends EntityId {
     @Column(precision = 3, scale = 6)
     private BigDecimal taxaJuros;
 
-    private LocalDateTime dataContratacao;
-    private LocalDateTime dataVencimento;
+    @Temporal(TemporalType.DATE)
+    private Date dataContratacao;
+    @Temporal(TemporalType.DATE)
+    private Date dataVencimento;
 }

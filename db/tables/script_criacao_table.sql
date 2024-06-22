@@ -12,7 +12,7 @@ CREATE TABLE usuarios (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    data_nascimento TIMESTAMP(6),
+    data_nascimento DATE,
     telefone VARCHAR(15),
     endereco_id BIGSERIAL,
     FOREIGN KEY (endereco_id) REFERENCES enderecos(id)
@@ -32,7 +32,7 @@ CREATE TABLE contas (
     agencia_id BIGSERIAL NOT NULL,
     tipo_conta VARCHAR(50),
     saldo NUMERIC(15, 2) DEFAULT 0.00,
-    data_abertura TIMESTAMP(6),
+    data_abertura DATE,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     FOREIGN KEY (agencia_id) REFERENCES agencias(id)
 );
@@ -72,8 +72,8 @@ CREATE TABLE emprestimos (
     conta_destino_id BIGSERIAL NOT NULL,
     valor_emprestimo NUMERIC(15, 2),
     taxa_juros NUMERIC(5, 2),
-    data_contratacao TIMESTAMP(6),
-    data_vencimento TIMESTAMP(6),
+    data_contratacao DATE,
+    data_vencimento DATE,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     FOREIGN KEY (conta_destino_id) REFERENCES contas(id)
 );
@@ -93,7 +93,7 @@ CREATE TABLE depositos (
     id BIGSERIAL PRIMARY KEY,
     conta_id BIGSERIAL NOT NULL,
     valor NUMERIC(15, 2),
-    data_deposito TIMESTAMP,
+    data_deposito DATE,
     descricao TEXT,
     FOREIGN KEY (conta_id) REFERENCES contas(id)
 );
