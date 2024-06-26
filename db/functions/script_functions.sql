@@ -94,15 +94,3 @@ END;
 $BODY$;
 
 SELECT * FROM usuarios_saldo_agencia('1990-01-01', 1000, 'Agência Central');
-
-
---Function que a trigger chama.
-CREATE OR REPLACE FUNCTION registrar_historico_saldos_trigger()
-RETURNS TRIGGER AS $$
-BEGIN
-    INSERT INTO historico_saldos (id, conta_id, saldo_anterior, saldo_atual, data_alteracao)
-    VALUES (OLD.id, OLD.saldo, NEW.saldo, NOW());
-
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;

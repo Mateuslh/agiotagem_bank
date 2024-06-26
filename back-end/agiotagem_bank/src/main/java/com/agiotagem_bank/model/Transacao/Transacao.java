@@ -34,6 +34,6 @@ public class Transacao extends EntityId {
     @Column(precision = 15, scale = 2)
     private BigDecimal valor;
 
-    private LocalDateTime dataTransacao;
+    private LocalDateTime dataTransacao = LocalDateTime.now();
     private String descricao;
 }
