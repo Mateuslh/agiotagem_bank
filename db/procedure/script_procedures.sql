@@ -25,4 +25,4 @@ BEGIN
 END;
 $$;
 
-CALL transferir_dinheiro(2, 1, 500.00, 2, 'teste 1');
+CALL transferir_dinheiro(2, 1, 500.00, 2, 'teste');
