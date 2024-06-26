@@ -1,79 +1,42 @@
-import { useState } from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import TransactionForm from './components/TransactionForm';
+import styles from './App.module.scss';
 
-function App() {
-  // Opções de destinatários para seleção
-  const recipientOptions = [
-    { value: 'recipient1', label: 'Destinatário 1' },
-    { value: 'recipient2', label: 'Destinatário 2' },
-    // Adicione mais conforme necessário
-  ];
+const App = () => {
+  const [users, setUsers] = useState([
+    { id: 1, name: 'Alice', balance: 1000 },
+    { id: 2, name: 'Bob', balance: 1500 },
+    { id: 3, name: 'Charlie', balance: 2000 },
+  ]);
 
-  // Estado para destinatário selecionado e quantia
-  const [selectedRecipient1, setSelectedRecipient1] = useState('');
-  const [amount1, setAmount1] = useState('');
-  const [selectedRecipient2, setSelectedRecipient2] = useState('');
-  const [amount2, setAmount2] = useState('');
-
-  // Função para lidar com o envio das quantias
-  const handleSend = () => {
-    console.log(`Enviando ${amount1} para ${selectedRecipient1}`);
-    console.log(`Enviando ${amount2} para ${selectedRecipient2}`);
-    // Resetando os campos após o envio (opcional)
-    setSelectedRecipient1('');
-    setAmount1('');
-    setSelectedRecipient2('');
-    setAmount2('');
+  const handleTransaction = (fromUserId, toUserId, amount) => {
+    setUsers(prevUsers =>
+      prevUsers.map(user => {
+        if (user.id === parseInt(fromUserId)) {
+          return { ...user, balance: user.balance - amount };
+        }
+        if (user.id === parseInt(toUserId)) {
+          return { ...user, balance: user.balance + amount };
+        }
+        return user;
+      })
+    );
   };
 
   return (
-    <div className="App">
-      <div className="transaction-container">
-        {/* Primeira transação */}
-        <div className="transaction">
-          <select
-            value={selectedRecipient1}
-            onChange={(e) => setSelectedRecipient1(e.target.value)}
-          >
-            <option value="">Escolha o Destinatário 1</option>
-            {recipientOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          <input
-            type="text"
-            placeholder="Quantia para Destinatário 1"
-            value={amount1}
-            onChange={(e) => setAmount1(e.target.value)}
-          />
-        </div>
-        {/* Segunda transação */}
-        <div className="transaction">
-          <select
-            value={selectedRecipient2}
-            onChange={(e) => setSelectedRecipient2(e.target.value)}
-          >
-            <option value="">Escolha o Destinatário 2</option>
-            {recipientOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          <input
-            type="text"
-            placeholder="Quantia para Destinatário 2"
-            value={amount2}
-            onChange={(e) => setAmount2(e.target.value)}
-          />
-        </div>
-        {/* Botão para enviar */}
-        <button onClick={handleSend}>Enviar Quantia</button>
-      </div>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Sistema de Conta Digital</h1>
+      <TransactionForm users={users} onTransaction={handleTransaction} />
+      <h2 className={styles.title}>Usuários</h2>
+      <ul className={styles.userList}>
+        {users.map(user => (
+          <li key={user.id} className={styles.userListItem}>
+            {user.name}: ${user.balance}
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
 export default App;
