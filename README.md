@@ -3,7 +3,7 @@
 # Integrantes
 João Daniel de Liz - f5joaodanieldeliz
 
-João Gabriel rosso dagostin - joaodagostin
+João Gabriel Rosso Dagostin - joaodagostin
 
 João Pedro Taufembach Acordi - JoaozinhoProgramation
 
@@ -46,7 +46,7 @@ Abaixo, segue os scripts SQL separados por tipo:
  não contendo validação alguma na camada de services.
 
 # Relatório Final
-O relatório final está disponível no 
+O relatório final está disponível no diretório [Documentos](./docs).
     
 
   
